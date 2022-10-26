@@ -1,1 +1,861 @@
-# test-api
+{
+	"info": {
+		"_postman_id": "d60add4f-35ca-47f1-a87a-e3f8d02f793c",
+		"name": "api-test2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24044683"
+	},
+	"item": [
+		{
+			"name": "https://blog.kata.academy/api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n    \"email\": \"pavel@gmail.com\",\r\n    \"password\": \"pokjhyt\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/users/login",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n    \"username\": \"pavel\",\r\n    \"email\": \"pavel@email.com\",\r\n    \"password\": \"12345\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/users",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blog.kata.academy/api/user",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n    \"email\": \"pave@gmail.com\",\r\n    \"password\": \"qwerty123\",\r\n    \"username\": \"pavel\",\r\n    \"bio\": \"7777777\",\r\n    \"image\": \"https://upload.wikimedia.org/wikipedia/commons/0/0e/Felis_silvestris_silvestris.jpg\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/user",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://blog.kata.academy/api/profiles/pavel",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"profiles",
+						"pavel"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"profile\": {\r\n        \"username\": \"pavel\",\r\n        \"following\": true\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/profiles/pavel/follow",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"profiles",
+						"pavel",
+						"follow"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"following\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/profiles/pavel/follow",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"profiles",
+						"pavel",
+						"follow"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"following\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/profiles/pavel/follow",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"profiles",
+						"pavel",
+						"follow"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 6",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles?tag=1&author=illuman13",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "1"
+						},
+						{
+							"key": "author",
+							"value": "illuman13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 7",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"article\": {\r\n    \"title\": \"222\",\r\n    \"description\": \"5665655\",\r\n    \"body\": \"jhufuf\",\r\n    \"tagList\": [\r\n      \"jjj\"\r\n    ]\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 8",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles/222-n0lbpk",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles",
+						"222-n0lbpk"
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "illuman13",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 9",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"article\": {\r\n    \"title\": \"5555\",\r\n    \"description\": \"89989\",\r\n    \"body\": \"zzzzzz\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles/222-n0lbpk",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles",
+						"222-n0lbpk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"article\": {\r\n    \"title\": \"5555\",\r\n    \"description\": \"89989\",\r\n    \"body\": \"zzzzzz\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles/222-n0lbpk/comments",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles",
+						"222-n0lbpk",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 11",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"comment\": {\r\n    \"body\": \"hello\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles/222-n0lbpk/comments",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles",
+						"222-n0lbpk",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 12",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles/222-n0lbpk/comments/6358780a3cf7051b0082b5af",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles",
+						"222-n0lbpk",
+						"comments",
+						"6358780a3cf7051b0082b5af"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6358780a3cf7051b0082b5af",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 13",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles/222-n0lbpk/favorite",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles",
+						"222-n0lbpk",
+						"favorite"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6358780a3cf7051b0082b5af",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 14",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://blog.kata.academy/api/articles/222-n0lbpk/favorite",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"articles",
+						"222-n0lbpk",
+						"favorite"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6358780a3cf7051b0082b5af",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy 15",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://blog.kata.academy/api/tags",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6358780a3cf7051b0082b5af",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
